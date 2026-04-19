@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russell Ridley — Real-Time Systems Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">EEL 5862 · Real-Time Systems · Spring 2026</p>
+      <h1>Application 6 <span class="accent">Project Showcase</span></h1>
+      <p class="tagline">
+        A real-time embedded system built on the ESP32-S3 using FreeRTOS
+        and the PlatformIO toolchain.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#demo">Watch the Demo</a>
+        <a class="btn ghost" href="#overview">Read the Overview</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="overview" class="card">
+      <h2>Overview</h2>
+      <p>
+        <!-- TODO: Replace with a short, plain-English description of your project. -->
+        This project demonstrates a real-time application developed for the
+        EEL 5862 Real-Time Systems course. It combines a FreeRTOS-based
+        task scheduler with peripheral I/O on an ESP32-S3 development board,
+        coordinating multiple concurrent tasks under strict timing
+        constraints.
+      </p>
+
+      <div class="grid">
+        <div class="stat">
+          <span class="stat-label">Platform</span>
+          <span class="stat-value">ESP32-S3 DevKitM-1</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Framework</span>
+          <span class="stat-value">Arduino + FreeRTOS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Toolchain</span>
+          <span class="stat-value">PlatformIO</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Language</span>
+          <span class="stat-value">C / C++</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="card">
+      <h2>Demo Video</h2>
+      <p class="muted">A short walkthrough of the working project.</p>
+      <div class="video-wrapper">
+        <!-- TODO: Replace YOUTUBE_VIDEO_ID with your YouTube video ID. -->
+        <iframe
+          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+          title="Project Demo Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Features</h2>
+      <ul class="features">
+        <li><strong>Concurrent tasks</strong> scheduled via FreeRTOS primitives.</li>
+        <li><strong>Inter-task communication</strong> using queues and semaphores.</li>
+        <li><strong>Deterministic timing</strong> verified against hard deadlines.</li>
+        <li><strong>Peripheral integration</strong> over GPIO, I²C, and SPI.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Links</h2>
+      <div class="links">
+        <a class="link-tile" href="https://github.com/rridley36" target="_blank" rel="noopener">
+          <span class="link-title">GitHub</span>
+          <span class="link-sub">@rridley36</span>
+        </a>
+        <a class="link-tile" href="#" target="_blank" rel="noopener">
+          <!-- TODO: Replace with a link to the project source repo. -->
+          <span class="link-title">Source Code</span>
+          <span class="link-sub">View on GitHub</span>
+        </a>
+        <a class="link-tile" href="#" target="_blank" rel="noopener">
+          <!-- TODO: Replace with a link to your YouTube video. -->
+          <span class="link-title">YouTube</span>
+          <span class="link-sub">Full demo video</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Russell Ridley · University of Central Florida</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
