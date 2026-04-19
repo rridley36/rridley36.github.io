@@ -32,29 +32,31 @@
       <h2>Overview</h2>
       <p>
         <!-- TODO: Replace with a short, plain-English description of your project. -->
-        This project demonstrates a real-time application developed for the
-        EEL 5862 Real-Time Systems course. It combines a FreeRTOS-based
-        task scheduler with peripheral I/O on an ESP32-S3 development board,
-        coordinating multiple concurrent tasks under strict timing
-        constraints.
+        Developed a healthcare-focused real-time patient monitoring system on an ESP32 using FreeRTOS, 
+        simulating heart rate data through an ADC input to model vital sign acquisition. 
+        The system detects abnormal heart rate conditions and triggers clinical-style alerts using LEDs, 
+        a PWM-driven buzzer, and a nurse call interface for immediate response. 
+        Concurrency is handled with semaphores and mutexes to ensure reliable coordination between sensing, 
+        alerting, and user interaction tasks. This project reflects embedded system design principles used in medical devices, 
+        emphasizing deterministic timing, fault awareness, and responsive patient care support.
       </p>
 
       <div class="grid">
         <div class="stat">
           <span class="stat-label">Platform</span>
-          <span class="stat-value">ESP32-S3 DevKitM-1</span>
+          <span class="stat-value">ESP32</span>
         </div>
         <div class="stat">
           <span class="stat-label">Framework</span>
-          <span class="stat-value">Arduino + FreeRTOS</span>
+          <span class="stat-value">ESP-IDF + FreeRTOS</span>
         </div>
         <div class="stat">
           <span class="stat-label">Toolchain</span>
-          <span class="stat-value">PlatformIO</span>
+          <span class="stat-value">PlatformIO + Wokwi</span>
         </div>
         <div class="stat">
           <span class="stat-label">Language</span>
-          <span class="stat-value">C / C++</span>
+          <span class="stat-value">C</span>
         </div>
       </div>
     </section>
@@ -78,10 +80,13 @@
     <section class="card">
       <h2>Features</h2>
       <ul class="features">
-        <li><strong>Concurrent tasks</strong> scheduled via FreeRTOS primitives.</li>
-        <li><strong>Inter-task communication</strong> using queues and semaphores.</li>
-        <li><strong>Deterministic timing</strong> verified against hard deadlines.</li>
-        <li><strong>Peripheral integration</strong> over GPIO, I²C, and SPI.</li>
+        <li><strong>Concurrent tasks</strong> scheduled via FreeRTOS for sensing, monitoring, and alert handling.</li>
+        <li><strong>Inter-task communication</strong> using semaphores and mutexes for safe event signaling and shared resource access.</li>
+        <li><strong>Deterministic timing</strong> maintained using vTaskDelayUntil() for consistent real-time behavior.</li>
+        <li><strong>Healthcare alert system</strong> with threshold-based heart rate detection triggering LEDs and a buzzer alarm.</li>
+        <li><strong>Sensor integration</strong> using ADC input to simulate real-time heart rate data.</li>
+        <li><strong>User interaction</strong> through a debounced nurse call button for manual assistance requests.</li>
+        <li><strong>Reliable output control</strong> with mutex-protected serial logging and coordinated alert responses.</li>
       </ul>
     </section>
 
